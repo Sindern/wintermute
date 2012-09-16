@@ -1,0 +1,18 @@
+Under heavy construction and neither stable nor useful at the moment. 
+
+This will eventually be a script to install/configure several packages to create a home automation, information and security system.  
+
+Base system at the moment is #! (http://crunchbanglinux.org/ ) with everything installed except for the printer support during the post-install setup. 
+
+Plans : 
+
+  - Voice activated commands, responses echo'd to terminal and piped to text-to-speech
+    - date/time/weather/etc
+  - Motion detection using a webcam.  While away from home, wintermute is activated with a voice command, then when motion is detected, she'll begin taking snapshots of the intruder and upload them to either dropbox or an FTP server.
+    - If not activated within 1 minute by the appropriate voice command, she'll send an instant message to a cell phone/email to warn the home owner. 
+    - Probably audio recordings would be nice.
+    - Maybe an alarm after 2 minutes? 
+    - Oh, and how about if you ignore the command it shoots you with tranquilizer darts!  Maybe not. 
+  - Home automation (Low Priority) 
+    - Control lights, thermostat, radio/TV channels, etc.
+  - Infinitely expandible.  The selector script can have voice commands added for user-defined functions.
