@@ -11,36 +11,27 @@
 #################################
 
 
-languagemodel = '9882' #set this to something sensible
+languagemodel = '7502' #set this to something sensible
 
 keycommand = {
-	'RIGHT': "super+Right", #move one tag to the right
-	'LEFT': "super+Left", #move one tag to the left
-	'TERMINAL': "ctrl+grave", #spawn the terminal
-	'CLOSE': "alt+F4", #close window
-	'ENTER': "Return",
-	'SAVE': "ctrl+s",
-	'NEW': "ctrl+n",
-	'TAB': "ctrl+Tab", #for seeing next firefox tab
-	'BACKSPACE': "BackSpace",
-	'CUT': "ctrl+x",
-	'COPY': "ctrl+c",
-	'PASTE': "ctrl+v"
+	'TERMINAL': "super+t", #spawn the terminal
+
 }
-for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
-	keycommand[letter] = letter.lower() #add all the letters - yes this is a true python file, you can do w/e you want in here
+#for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+#	keycommand[letter] = letter.lower() #add all the letters - yes this is a true python file, you can do w/e you want in here
+
 programcommand = {
 	'FIREFOX': "firefox",
-	'NOTEPAD': "medit",
-	'GOOGLE': "firefox www.google.com", #open google in a new tab in firefox
-	'HIBERNATE': "sudo hibernate",
-	'PLAY': "xmms2 play",
-	'STOP': "xmms2 stop"
+	'NOTEPAD': "geany",
+	'WEATHER': "/home/wintermute/Dropbox/ProjCoding/automation_bot/speech/weather.sh",
+	'DATE': "/home/wintermute/Dropbox/ProjCoding/automation_bot/speech/date.sh",
+	'TIME': "/home/wintermute/Dropbox/ProjCoding/automation_bot/speech/time.sh",
+	'SHUTUP': "/home/wintermute/Dropbox/ProjCoding/automation_bot/speech/shutup.sh",
+	'CAPTAINS LOG': "touch $HOME/wmlisten ; sleep 5; rm -f $HOME/wmlisten",
+#	'CAPTAINS LOG': "/home/wintermute/Dropbox/ProjCoding/automation_bot/speech/captainslog.sh",
 }
 
 mousecommand = {
-	'CLICK': '1', #leftclick
-	'RIGHTCLICK': '3' #rightclick
 }
 
 progswithargs = {
