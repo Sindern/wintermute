@@ -1,4 +1,12 @@
 ## Weather update daemon.  Update time can be adjusted to fit the API's limits. 
+
+## Wintermute listening test.
+bldylw='\e[1;33m' # Yellow
+txtrst='\e[0m'    # Text Reset
+if [[ ! -f $HOME/wintermute/wmlisten && "$1" != "debug" ]]
+  then echo -e "\t${bldylw}Weather response triggered, but Wintermute wasn't listening.${txtrst}" ; exit
+fi
+
 updateseconds=300 # amount of time to wait between updates to stay within Weather Underground's free API limit.
 
 ## Color variables
@@ -6,7 +14,6 @@ txtgrn='\e[0;32m' # Green
 bldgrn='\e[1;32m' # Green
 bldblu='\e[1;34m' # Blue
 bldwht='\e[1;37m' # White
-txtrst='\e[0m'    # Text Reset
 
 ## Grab the update file to tmp dir if it doesn't exist or it's been more than $updateseconds since last update.
 [[ ! -d $HOME/tmp/wintermute/ ]] &&  mkdir -p $HOME/tmp/wintermute/
