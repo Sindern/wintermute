@@ -1,6 +1,8 @@
 #! /bin/bash
-
 #Return the time in a TTS friendly manner
+if [[ ! -f $HOME/wintermute/wmlisten ]]
+  then echo "Time response triggered, but Wintermute wasn't listening." ; exit
+fi
 
 if [[ "$(date +%H)" == "00" ]]
  then hour="midnight"

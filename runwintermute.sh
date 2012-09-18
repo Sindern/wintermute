@@ -1,4 +1,5 @@
-cd $HOME/wintermute && git pull 
+echo "Updating wintermute to latest version."
+cd $HOME/wintermute && git reset --hard HEAD && git pull 
 echo "chmodding .sh files to +x "
 find $HOME/wintermute -type f -iname "*.sh" -print -exec chmod +x "{}" \;
 echo "removing old conf files"

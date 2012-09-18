@@ -1,5 +1,9 @@
 #! /bin/bash
-## Under construction.  Working on getting weather info from command line without an API
+
+if [[ ! -f $HOME/wintermute/wmlisten ]]
+  then echo "Weather response triggered, but Wintermute wasn't listening." ; exit
+fi
+
 ##sample output: Clear@Temperature@69.3 °F@Feels Like 69.3 °F@Wind(mph)@0.0@Sunrise / Set@7:17 AM@7:31 PM@Moon@Waxing Crescent
 wstr=$(lynx --dump http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=Austin%2C+TX |grep -v "http://" | grep -v "javascript:void" | grep -v "  \* "|sed '1,/  Now/d' | sed 1d | head -n 11 | sed 's|^\s*||g'|sed ':a;N;$!ba;s/\n/@/g'|sed 's|°F|fahrenheit|g')
 
