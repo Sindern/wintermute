@@ -8,13 +8,13 @@ elif [[ "$(date +%H)" == "12" ]]
  then hour="noon"
 elif [[ "$(date +%H)" -gt "12" ]]
  then hour="$(conv/num_to_txt.sh $(date +%I))"
-  ampm="PM"
+  ampm="pee ehm"
 else hour="$(conv/num_to_txt.sh $(date +%H))"
-  ampm="AM"
+  ampm="ae ehm"
 fi
 minute="$(conv/num_to_txt.sh $(date +%M))"
 seconds="$(conv/num_to_txt.sh $(date +%S))"
 
-response="It is $hour $minute $ampm plus $seconds seconds"
-echo "Date Query: $response"
-echo $response | festival -tts 2> /dev/null &
+response="It is $hour $minute $ampm , $seconds seconds"
+echo "Time Query: $response"
+echo $response | festival --tts 2> /dev/null &
