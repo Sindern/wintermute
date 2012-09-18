@@ -16,4 +16,5 @@ minute="$(conv/num_to_txt.sh $(date +%M))"
 seconds="$(conv/num_to_txt.sh $(date +%S))"
 
 response="It is $hour $minute $ampm plus $seconds seconds"
-echo $response
+echo "Date Query: $response"
+echo $response | festival -tts 2> /dev/null &

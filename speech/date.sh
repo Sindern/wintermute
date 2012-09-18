@@ -7,5 +7,5 @@ month="$(date +%B)"
 day="$(bash conv/num_to_ord.sh $(date +%d|sed 's|^0||g'))"
 
 today="$month $day, $year"
-echo "Today is $today." | festival --tts 2> /dev/null
 echo "Returned date: $today"
+echo "Today is $today." | festival --tts 2> /dev/null &

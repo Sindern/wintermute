@@ -6,6 +6,7 @@ curtemp="$(bash conv/num_to_txt.sh $(echo $wstr|cut -d'@' -f3|cut -d'.' -f1)) po
 feelslike="$(bash conv/num_to_txt.sh $(echo $wstr|cut -d'@' -f4|egrep -o '[0-9]+\.?'))"
 wind="$(bash conv/num_to_txt.sh $(echo $wstr|cut -d'@' -f6|cut -d'.' -f1))"
 [[ "$wind" == "" ]] && wind="zero"
-echo "Currently $curcond and $curtemp fahrenheit. Feels like $feelslike fahrenheit. Wind is at $wind miles per hour."
-
+response="Currently $curcond and $curtemp fahrenheit. Feels like $feelslike fahrenheit. Wind is at $wind miles per hour."
+echo "Weather inquiry: $response"
+echo $response | festival --tts 2> /dev/null &
 #Moon is a $(echo $wstr|cut -d'@' -f11)
