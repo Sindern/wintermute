@@ -11,7 +11,7 @@
 #################################
 
 
-languagemodel = '7502' #set this to something sensible
+languagemodel = '2131' #set this to something sensible
 
 keycommand = {
 	'TERMINAL': "super+t", #spawn the terminal

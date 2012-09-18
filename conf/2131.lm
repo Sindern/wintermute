@@ -1,4 +1,4 @@
-Language model created by QuickLM on Tue Sep 18 03:48:18 EDT 2012
+Language model created by QuickLM on Tue Sep 18 05:00:43 EDT 2012
 Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
 
 The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
@@ -7,58 +7,54 @@ The code that was used to produce this language model is available in Open Sourc
 Please visit http://www.speech.cs.cmu.edu/tools/ for more information
 
 The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
-This model based on a corpus of 9 sentences and 12 words
+This model based on a corpus of 8 sentences and 11 words
 
 \data\
-ngram 1=12
-ngram 2=19
-ngram 3=10
+ngram 1=11
+ngram 2=17
+ngram 3=9
 
 \1-grams:
--0.7939 </s> -0.3010
--0.7939 <s> -0.2249
--1.7482 ALERT -0.2249
--1.7482 CAPTAINS -0.2932
--1.7482 DATE -0.2249
--1.7482 FIREFOX -0.2249
--1.7482 LOG -0.2249
--1.7482 NOTEPAD -0.2249
--1.7482 SHUTUP -0.2249
--1.7482 TERMINAL -0.2249
--1.7482 TIME -0.2249
--1.7482 WEATHER -0.2249
+-0.7959 </s> -0.3010
+-0.7959 <s> -0.2253
+-1.6990 ALERT -0.2253
+-1.6990 CAPTAINS -0.2923
+-1.6990 DATE -0.2253
+-1.6990 LOG -0.2253
+-1.6990 SHUTUP -0.2253
+-1.6990 TERMINAL -0.2253
+-1.6990 TIME -0.2253
+-1.6990 WEATHER -0.2253
+-1.6990 WINTERMUTE -0.2253
 
 \2-grams:
--1.2553 <s> ALERT 0.0000
--1.2553 <s> CAPTAINS 0.0000
--1.2553 <s> DATE 0.0000
--1.2553 <s> FIREFOX 0.0000
--1.2553 <s> NOTEPAD 0.0000
--1.2553 <s> SHUTUP 0.0000
--1.2553 <s> TERMINAL 0.0000
--1.2553 <s> TIME 0.0000
--1.2553 <s> WEATHER 0.0000
+-1.2041 <s> ALERT 0.0000
+-1.2041 <s> CAPTAINS 0.0000
+-1.2041 <s> DATE 0.0000
+-1.2041 <s> SHUTUP 0.0000
+-1.2041 <s> TERMINAL 0.0000
+-1.2041 <s> TIME 0.0000
+-1.2041 <s> WEATHER 0.0000
+-1.2041 <s> WINTERMUTE 0.0000
 -0.3010 ALERT </s> -0.3010
 -0.3010 CAPTAINS LOG 0.0000
 -0.3010 DATE </s> -0.3010
--0.3010 FIREFOX </s> -0.3010
 -0.3010 LOG </s> -0.3010
--0.3010 NOTEPAD </s> -0.3010
 -0.3010 SHUTUP </s> -0.3010
 -0.3010 TERMINAL </s> -0.3010
 -0.3010 TIME </s> -0.3010
 -0.3010 WEATHER </s> -0.3010
+-0.3010 WINTERMUTE </s> -0.3010
 
 \3-grams:
 -0.3010 <s> ALERT </s>
 -0.3010 <s> CAPTAINS LOG
 -0.3010 <s> DATE </s>
--0.3010 <s> FIREFOX </s>
--0.3010 <s> NOTEPAD </s>
 -0.3010 <s> SHUTUP </s>
 -0.3010 <s> TERMINAL </s>
 -0.3010 <s> TIME </s>
 -0.3010 <s> WEATHER </s>
+-0.3010 <s> WINTERMUTE </s>
 -0.3010 CAPTAINS LOG </s>
 
 \end\
