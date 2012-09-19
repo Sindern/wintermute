@@ -22,11 +22,11 @@ keycommand = {
 
 programcommand = {
   'WINTERMUTE': "touch $HOME/wintermute/wmlisten ; sleep 5; rm -f $HOME/wintermute/wmlisten",
-	'WEATHER': "bash /home/wintermute/Dropbox/ProjCoding/automation_bot/speech/weather.sh",
-	'DATE': "bash /home/wintermute/Dropbox/ProjCoding/automation_bot/speech/date.sh",
-	'TIME': "bash /home/wintermute/Dropbox/ProjCoding/automation_bot/speech/time.sh",
-	'SHUTUP': "bash /home/wintermute/Dropbox/ProjCoding/automation_bot/speech/shutup.sh",
-	'CAPTAINS LOG': "bash /home/wintermute/Dropbox/ProjCoding/automation_bot/speech/captainslog.sh",
+	'WEATHER': "bash $HOME/wintermute/speech/weather.sh",
+	'DATE': "bash $HOME/wintermute/speech/date.sh",
+	'TIME': "bash $HOME/wintermute/speech/time.sh",
+	'SHUTUP': "bash $HOME/wintermute/speech/shutup.sh",
+	'CAPTAINS LOG': "bash $HOME/wintermute/speech/captainslog.sh",
 }
 
 mousecommand = {

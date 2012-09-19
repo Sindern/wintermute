@@ -28,4 +28,4 @@ seconds="$($HOME/wintermute/speech/conv/num_to_txt.sh $(date +%S))"
 ## Output to festival & to terminal 
 response="It is $hour $minute $ampm , $seconds seconds"
 echo $response | festival --tts 2> /dev/null &
-echo -e "\n${bldblu}   The current time is: ${bldpur}$(date +%T)${txtrst}\n"
+echo -e "\n\t${bldblu}The current time is: ${bldpur}$(date +%T)${txtrst}\n"

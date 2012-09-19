@@ -19,7 +19,7 @@ bldwht='\e[1;37m' # White
 [[ ! -d $HOME/tmp/wintermute/ ]] &&  mkdir -p $HOME/tmp/wintermute/
 file="$HOME/tmp/wintermute/Austin.json"
 lastupdate=$(expr $(date +%s) - $(stat --format=%Y $file))
-if [[ $lastupdate -gt $updateseconds ]]
+if [[ $lastupdate -gt $updateseconds || ! -f $file  ]]
  then wget -O $file http://api.wunderground.com/api/a78ff389f1302f7b/conditions/q/TX/Austin.json 2> /dev/null 1> /dev/null
   echo -e "${bldblu}--==(Updating with the latest weather.)==--\n\t${bldwht}(last update $lastupdate sec ago) ${txtrst}"
 else echo -e "${bldblu}--==(Displaying Cached Weather Data)==--\n\t${bldwht}(last update $lastupdate sec ago) ${txtrst}"

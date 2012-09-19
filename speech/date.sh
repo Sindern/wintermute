@@ -14,4 +14,4 @@ bldblu='\e[1;34m' # Blue
 ##Return the values to festival & terminal
 today="$(date "+%B %d, %Y")"
 echo "Today is $today." | festival --tts 2> /dev/null &
-echo -e "\n${bldblu}Today is: ${bldpur}${today}${txtrst}\n"
+echo -e "\n\t${bldblu}Today is: ${bldpur}${today}${txtrst}\n"
