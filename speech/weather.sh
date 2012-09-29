@@ -46,7 +46,7 @@ weather=$(grep -Po "(?<=\"weather\":\").*(?=\",)" $file|head -n 1)
 temp=$(grep -Po "(?<=\"temp_f\":).*(?=,)" $file|head -n 1)
 humidity=$(grep -Po "(?<=\"relative_humidity\":\").*(?=\",)" $file|head -n 1 | sed 's|%| percent|g')
 windstring=$(grep -Po "(?<=\"wind_string\":\").*(?=\",)" $file|head -n 1)
-winddir=$(wind_string$(grep -Po "(?<=\"wind_dir\":\").*(?=\",)" $file|head -n 1))
+winddir=$(wind_string $(grep -Po "(?<=\"wind_dir\":\").*(?=\",)" $file|head -n 1))
 windmph=$(grep -Po "(?<=\"wind_mph\":).*(?=,)" $file|head -n 1)
 windgustmph=$(grep -Po "(?<=\"wind_gust_mph\":).*(?=,)" $file|head -n 1)
 
