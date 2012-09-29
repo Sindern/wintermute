@@ -51,7 +51,10 @@ windmph=$(grep -Po "(?<=\"wind_mph\":).*(?=,)" $file|head -n 1)
 windgustmph=$(grep -Po "(?<=\"wind_gust_mph\":).*(?=,)" $file|head -n 1)
 
 #formulate a response and echo it to festival
-response="Weather is $weather in $city $state. Temperature is $temp fahrenheit with $humidity humidity.  There is a $windstring wind from the $winddir at $windmph miles per hour, gusting to $windgustmph miles per hour."
+response="Weather is $weather in $city $state. Temperature is $temp fahrenheit with $humidity humidity."
+if [[ "$windmph" != "0.0" ]]
+ then response="$response There is a $windstring wind from the $winddir at $windmph miles per hour, gusting to $windgustmph miles per hour."
+fi
 echo $response | festival --tts 2> /dev/null &
 #and print out some pretty shit to the terminal.
 echo -e "\n\t${bldblu}Weather for $city, $state.${txtrst}"
