@@ -15,6 +15,21 @@ bldgrn='\e[1;32m' # Green
 bldblu='\e[1;34m' # Blue
 bldwht='\e[1;37m' # White
 
+function wind_string() {
+  echo $1 | sed 's|^S|South |g'|
+  sed 's|^N|North |g'|
+  sed 's|^W|West |g'|
+  sed 's|^E|East |g'|
+  sed 's|SW$|South West|g'|
+  sed 's|SE$|South East|g'|
+  sed 's|NW$|North West|g'|
+  sed 's|NE$|North East|g'|
+  sed 's|W$|West|g'|
+  sed 's|E$|East|g'|
+  sed 's|N$|North|g'|
+  sed 's|S$|South|g'
+}
+
 ## Grab the update file to tmp dir if it doesn't exist or it's been more than $updateseconds since last update.
 [[ ! -d $HOME/tmp/wintermute/ ]] &&  mkdir -p $HOME/tmp/wintermute/
 file="$HOME/tmp/wintermute/Austin.json"
@@ -31,7 +46,7 @@ weather=$(grep -Po "(?<=\"weather\":\").*(?=\",)" $file|head -n 1)
 temp=$(grep -Po "(?<=\"temp_f\":).*(?=,)" $file|head -n 1)
 humidity=$(grep -Po "(?<=\"relative_humidity\":\").*(?=\",)" $file|head -n 1 | sed 's|%| percent|g')
 windstring=$(grep -Po "(?<=\"wind_string\":\").*(?=\",)" $file|head -n 1)
-winddir=$( grep -Po "(?<=\"wind_dir\":\").*(?=\",)" $file|head -n 1)
+winddir=$(wind_string$(grep -Po "(?<=\"wind_dir\":\").*(?=\",)" $file|head -n 1))
 windmph=$(grep -Po "(?<=\"wind_mph\":).*(?=,)" $file|head -n 1)
 windgustmph=$(grep -Po "(?<=\"wind_gust_mph\":).*(?=,)" $file|head -n 1)
 
