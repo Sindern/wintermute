@@ -1,15 +1,15 @@
 #! /bin/bash
 
 echo "Checking to see if the packages we need exist."
-for package in git motion ; do
+for package in git motion rclone; do
   dpkg -l ${package} || install_packages+=" ${install_packages} "
 done
 
 if [[ -n ${install_packages}]]; then
-  echo "Installing necessary packages."
-  sudo apt-get install ${install_packages}
+  echo "  Installing necessary packages."
+  sudo apt-get -y install ${install_packages}
 else
-  echo "All necessary packages already installed."
+  echo "  All necessary packages already installed."
 fi
 
 # Set up the camera
