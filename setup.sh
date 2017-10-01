@@ -10,7 +10,7 @@ for package in git motion rclone aptitude; do
   dpkg -l ${package} || install_packages+=" ${install_packages} "
 done
 
-if [[ -n ${install_packages}]]; then
+if [[ -n ${install_packages} ]]; then
   echo "  Installing necessary packages."
   sudo aptitude -y install ${install_packages}
 else
