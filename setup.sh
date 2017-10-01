@@ -32,5 +32,5 @@ if [[ ${REPLY} =~ ^[Yy] ]] ; then
      libreoffice-draw libreoffice-gtk libreoffice-gtk2 libreoffice-impress libreoffice-java-common\
      libreoffice-math libreoffice-report-builder-bin libreoffice-style-galaxy libreoffice-systray\
      libreoffice-writer rpi-chromium-mods libreoffice-sdbc-hsqldb bluej greenfoot wolfram-engine\
-     scratch scratch2 squeak-plugins-scratch
+     scratch scratch2 squeak-plugins-scratch nuscratch
 fi
