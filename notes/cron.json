@@ -1,0 +1,9 @@
+{ "Events":[
+    { "name":"WorkWeek",
+      "days":"TWHFS",
+      "start":"23:30",
+      "end":"10:30",
+      "repeat":true
+    }
+  ]
+}
