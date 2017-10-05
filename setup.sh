@@ -17,6 +17,10 @@ else
   echo "  All necessary packages already installed."
 fi
 
+if ! grep "^bcm2835-v4l2$" /etc/modules ; then
+  echo "bcm2835-v4l2" | sudo tee -a /etc/modules
+fi
+
 # Set up the camera
 echo -n "Checking for Video Device on /dev/vid* ... "
 ls -al /dev/vid* && Echo "Video Device Found."|| sudo modprobe bcm2835-v4l2
