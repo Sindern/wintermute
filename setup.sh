@@ -6,7 +6,7 @@ dpkg -l aptitude || { sudo apt-get update ; sudo apt-get -y install aptitude ; }
 sudo aptitude update
 
 echo "Checking to see if the packages we need exist."
-for package in git motion rclone aptitude; do
+for package in git motion rclone aptitude jpegoptim; do
   dpkg -l ${package} || install_packages+=" ${install_packages} "
 done
 
