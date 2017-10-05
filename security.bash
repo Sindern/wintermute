@@ -25,8 +25,9 @@ securitystop() {
 }
 
 
-case $2 in
+case $1 in
   start) securitystart ;;
   stop) securitystop ;;
   restart) securitystop ; securitystart ;;
+  *) echo 'Usage: start|stop|restart';;
 esac
