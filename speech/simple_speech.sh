@@ -17,5 +17,9 @@ case $1 in
   date) speak_date ;;
 esac
 
-echo "Display:" ${display_text}
-echo "Speak  :" ${speak_text}
+
+if [[ -n ${speak_text} ]] ; then
+  echo "Display:" ${display_text}
+  echo "Speak: ${speak_text}"
+  pico2wave -w /tmp/speech.wav "${speak_text}" && mplayer /tmp/speech.wav
+fi
