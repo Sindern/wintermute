@@ -1,13 +1,13 @@
 #! /bin/bash
 
 echo -e "Checking for aptitude."
-dpkg -l aptitude || { sudo apt-get update ; sudo apt-get -y install aptitude ; }
+dpkg -l aptitude &>/dev/null || { sudo apt-get update ; sudo apt-get -y install aptitude ; }
 
 sudo aptitude update
 
 echo "Checking to see if the packages we need exist."
 for package in git motion rclone aptitude jpegoptim mplayer libttspico-utils jq; do
-  dpkg -l ${package} || install_packages+=" ${install_packages} "
+  dpkg -l ${package} &> /dev/null || install_packages+=" ${package} "
 done
 
 if [[ -n ${install_packages} ]]; then
