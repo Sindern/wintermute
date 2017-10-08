@@ -1,0 +1,24 @@
+##########################
+#### General Settings ####
+##########################
+
+# Directory Settings
+wm_conf_home=${HOME}/.wintermute
+wm_temp_dir=${wm_conf_home}/tmp
+
+# Create the temp dir and home dir if they don't exist.
+[[ ! -d ${wm_temp_dir} ]] &&  mkdir -p ${wm_temp_dir}
+
+##########################
+#### Weather Settings ####
+##########################
+
+# API key for WeatherUnderground API
+weather_api_key='API KEY GOES HERE'
+# Delay for updating cache. (to conform to rate limits)
+weather_update_delay=300
+# Override the auto-detected IP in case of VPN situations.
+weather_ip_override=''
+
+
+# Conf End
